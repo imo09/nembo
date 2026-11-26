@@ -1,4 +1,4 @@
-# nembo 1.2.0
+# nembo 1.2.1
 
 Web app meteo di **nautargo**: previsioni, tempo passato dal 1940, pagella delle previsioni, registro con esportazione Excel e PDF, allerte della Protezione Civile.
 
@@ -20,6 +20,12 @@ Non servono chiavi, account o server: l'app chiama direttamente i servizi aperti
 - Copernicus CAMS tramite Open-Meteo: qualità dell'aria
 - Dipartimento della Protezione Civile (CC BY 4.0): bollettino di criticità nazionale, da GitHub `pcm-dpc`
 - GeoNames (CC BY 4.0) per la ricerca, OpenStreetMap per il nome della posizione
+
+## Novità della 1.2.1
+
+- Icone meteo riviste tutte: raggi del sole uniformi e solo dove non toccano la nuvola, gocce, fiocchi e fulmine centrati sotto la nuvola
+- In ogni pannello dell'allerta, il collegamento al sito delle allerte della Regione del luogo (per Molise, Puglia e Provincia di Trento, in attesa di un indirizzo verificato, l'elenco nazionale dei Centri Funzionali)
+- Icona dell'app e favicon con la "o" di nembo
 
 ## Novità della 1.2.0
 

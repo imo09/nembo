@@ -36,14 +36,14 @@
   --rain:#7FB3DA;--rain-soft:#203B51;--sun:#E8A867;--cloud:#A7B4BD;--moon:#C6D0D7;
   --ok:#70CFC0;--ok-soft:#13302E;
   --y-soft:#383010;--y-ink:#F4DB88;--o-soft:#3E250E;--o-ink:#F6C390;--r-soft:#43181A;--r-ink:#F4B3AD;
-  --cloud-f:#26394A;--cloud-f2:#1C2E3D;--cloud-f3:#33495B;--sun-f:#4D3B1E;--moon-f:#2A3B49;--grid:#24394A;--shadow:none;--area:.18;color-scheme:dark}}
+  --cloud-f:#26394A;--cloud-f2:#1C2E3D;--cloud-f3:#33495B;--sun-f:#B8803F;--moon-f:#2A3B49;--grid:#24394A;--shadow:none;--area:.18;color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0A151E;--card:#12222F;--card2:#182C3B;--ink:#E9EDEC;--ink2:#B5C1C9;--ink3:#93A1AB;--line:#22384A;
   --brass:#E8A867;--brass-ink:#EDB67C;--brass-soft:#2B261C;
   --rain:#7FB3DA;--rain-soft:#203B51;--sun:#E8A867;--cloud:#A7B4BD;--moon:#C6D0D7;
   --ok:#70CFC0;--ok-soft:#13302E;
   --y-soft:#383010;--y-ink:#F4DB88;--o-soft:#3E250E;--o-ink:#F6C390;--r-soft:#43181A;--r-ink:#F4B3AD;
-  --cloud-f:#26394A;--cloud-f2:#1C2E3D;--cloud-f3:#33495B;--sun-f:#4D3B1E;--moon-f:#2A3B49;--grid:#24394A;--shadow:none;--area:.18;color-scheme:dark}
+  --cloud-f:#26394A;--cloud-f2:#1C2E3D;--cloud-f3:#33495B;--sun-f:#B8803F;--moon-f:#2A3B49;--grid:#24394A;--shadow:none;--area:.18;color-scheme:dark}
 
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%;background:var(--bg)}
@@ -90,7 +90,7 @@ svg{display:block;flex:none}
 .rc{display:flex;flex-direction:column;align-items:center;gap:6px;width:100%;padding:8px 4px 10px;border:0;background:none;border-radius:22px;text-align:center}
 .rc:active{background:var(--card2)}
 .rc-main{display:flex;align-items:center;justify-content:center;gap:14px;max-width:100%}
-.rc-ic .wxi{stroke-width:1.15}
+.rc-ic .wxi{stroke-width:1.3}
 .rc-t{font-size:84px;font-weight:300;line-height:1;letter-spacing:-.055em}
 .rc-side{display:flex;flex-direction:column;align-items:flex-start;gap:3px;padding-left:14px;border-left:1px solid var(--line)}
 .rc-side small{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3)}
@@ -442,7 +442,9 @@ tr.wet td:nth-child(4){color:var(--rain);font-weight:700}
 .w-o{overflow:visible;animation:spFloat 4.2s ease-in-out infinite}.w-o path{fill:var(--cloud-f);stroke:var(--ink);stroke-width:7;stroke-linejoin:round}
 
 /* ---------- 1.2: icone animate ---------- */
-.anim .i-rays{transform-box:fill-box;transform-origin:center;animation:spin 22s linear infinite}
+.anim .i-rays{transform-box:fill-box;transform-origin:center;animation:spin 24s linear infinite}
+.anim .i-rays.p{transform-box:view-box;transform-origin:9px 9px;animation:rayPulse 3.2s ease-in-out infinite}
+@keyframes rayPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.1);opacity:.75}}
 .anim .i-disk{transform-box:fill-box;transform-origin:center;animation:breathe 4s ease-in-out infinite}
 .anim .i-cl{animation:drift 5.5s ease-in-out infinite alternate}
 .anim .i-cl.bk{animation:drift2 7s ease-in-out infinite alternate}
@@ -511,6 +513,7 @@ tr.wet td:nth-child(4){color:var(--rain);font-weight:700}
 .pills::-webkit-scrollbar{display:none}
 .pills .pb{flex:1 1 0;min-width:0;justify-content:center;padding:0 10px;gap:5px}
 .pills .pb span{min-width:0}
+.reg-a{margin-top:10px}.reg-a a:first-child{background:none;color:var(--ink);border-color:var(--line)}.reg-a a:last-child{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 
 /* ---------- 1.2: intestazioni fisse dei luoghi affiancati ---------- */
 .col-h{position:sticky;top:var(--toph);z-index:4;margin:0 -4px 8px;padding:6px 8px 8px;background:var(--bg);border-bottom:1px solid var(--line);align-items:center}
@@ -573,7 +576,7 @@ tr.wet td:nth-child(4){color:var(--rain);font-weight:700}
 </style>
 </head>
 <body>
-<div id="splash" role="button" tabindex="0" aria-label="nembo, tocca per continuare"><div class="sp-c"><svg class="sp-o" width="132" height="102" viewBox="300 -58 78 60" aria-hidden="true"><path class="sp-o-b" d="M323 -5.3A13.5 13.5 0 0 1 320 -32A17 17 0 1 1 354 -33.8A14.5 14.5 0 0 1 350 -5.3Z"/><path class="sp-o-p" pathLength="1" d="M323 -5.3A13.5 13.5 0 0 1 320 -32A17 17 0 1 1 354 -33.8A14.5 14.5 0 0 1 350 -5.3Z"/></svg><svg class="sp-w" height="30" width="145.8" viewBox="6.9 -74 364.1 74.9" role="img" aria-label="nembo"><path fill="currentColor" d="M37.6 -56.2Q47.5 -56.2 53.6 -50Q59.7 -43.7 59.7 -32.5L59.7 -32.5L59.7 0L45.7 0L45.7 -30.6Q45.7 -37.2 42.4 -40.8Q39.1 -44.3 33.4 -44.3L33.4 -44.3Q27.6 -44.3 24.3 -40.8Q20.9 -37.2 20.9 -30.6L20.9 -30.6L20.9 0L6.9 0L6.9 -55.4L20.9 -55.4L20.9 -48.5Q23.7 -52.1 28.1 -54.2Q32.4 -56.2 37.6 -56.2L37.6 -56.2M124.5 -28.9Q124.5 -25.9 124.1 -23.5L124.1 -23.5L83.6 -23.5Q84.1 -17.5 87.8 -14.1Q91.5 -10.7 96.9 -10.7L96.9 -10.7Q104.7 -10.7 108 -17.4L108 -17.4L123.1 -17.4Q120.7 -9.4 113.9 -4.3Q107.1 0.9 97.2 0.9L97.2 0.9Q89.2 0.9 82.9 -2.7Q76.5 -6.2 73 -12.7Q69.4 -19.2 69.4 -27.7L69.4 -27.7Q69.4 -36.3 72.9 -42.8Q76.4 -49.3 82.7 -52.8Q89 -56.3 97.2 -56.3L97.2 -56.3Q105.1 -56.3 111.4 -52.9Q117.6 -49.5 121.1 -43.3Q124.5 -37 124.5 -28.9L124.5 -28.9M83.7 -32.9L110 -32.9Q109.9 -38.3 106.1 -41.6Q102.3 -44.8 96.8 -44.8L96.8 -44.8Q91.6 -44.8 88.1 -41.7Q84.5 -38.5 83.7 -32.9L83.7 -32.9M203.5 -56.2Q213.7 -56.2 220 -50Q226.2 -43.7 226.2 -32.5L226.2 -32.5L226.2 0L212.2 0L212.2 -30.6Q212.2 -37.1 208.9 -40.6Q205.6 -44 199.9 -44L199.9 -44Q194.2 -44 190.9 -40.6Q187.5 -37.1 187.5 -30.6L187.5 -30.6L187.5 0L173.5 0L173.5 -30.6Q173.5 -37.1 170.2 -40.6Q166.9 -44 161.2 -44L161.2 -44Q155.4 -44 152.1 -40.6Q148.7 -37.1 148.7 -30.6L148.7 -30.6L148.7 0L134.7 0L134.7 -55.4L148.7 -55.4L148.7 -48.7Q151.4 -52.2 155.7 -54.2Q159.9 -56.2 165 -56.2L165 -56.2Q171.5 -56.2 176.6 -53.5Q181.7 -50.7 184.5 -45.6L184.5 -45.6Q187.2 -50.4 192.4 -53.3Q197.5 -56.2 203.5 -56.2L203.5 -56.2M253.5 -47.3Q256.2 -51.3 261 -53.8Q265.7 -56.3 271.8 -56.3L271.8 -56.3Q278.9 -56.3 284.7 -52.8Q290.4 -49.3 293.8 -42.9Q297.1 -36.4 297.1 -27.9L297.1 -27.9Q297.1 -19.4 293.8 -12.9Q290.4 -6.3 284.7 -2.7Q278.9 0.9 271.8 0.9L271.8 0.9Q265.6 0.9 261 -1.6Q256.3 -4 253.5 -7.9L253.5 -7.9L253.5 0L239.5 0L239.5 -74L253.5 -74L253.5 -47.3M282.8 -27.9Q282.8 -32.9 280.8 -36.6Q278.7 -40.2 275.4 -42.1Q272 -44 268.1 -44L268.1 -44Q264.3 -44 261 -42.1Q257.6 -40.1 255.6 -36.4Q253.5 -32.7 253.5 -27.7L253.5 -27.7Q253.5 -22.7 255.6 -19Q257.6 -15.3 261 -13.4Q264.3 -11.4 268.1 -11.4L268.1 -11.4Q272 -11.4 275.4 -13.4Q278.7 -15.4 280.8 -19.1Q282.8 -22.8 282.8 -27.9L282.8 -27.9"/><path fill="none" stroke="currentColor" stroke-width="12.5" stroke-linejoin="round" d="M323 -5.3A13.5 13.5 0 0 1 320 -32A17 17 0 1 1 354 -33.8A14.5 14.5 0 0 1 350 -5.3Z"/></svg><p class="sp-say">Che tempo fa, e che tempo ha fatto.</p></div><div class="sp-f"><span class="sp-go">Tocca per continuare</span><span class="sp-v">Versione <i id="sp-ver">1.2.0</i></span><span class="sp-by">by <b>nautargo</b></span></div></div>
+<div id="splash" role="button" tabindex="0" aria-label="nembo, tocca per continuare"><div class="sp-c"><svg class="sp-o" width="132" height="102" viewBox="300 -58 78 60" aria-hidden="true"><path class="sp-o-b" d="M323 -5.3A13.5 13.5 0 0 1 320 -32A17 17 0 1 1 354 -33.8A14.5 14.5 0 0 1 350 -5.3Z"/><path class="sp-o-p" pathLength="1" d="M323 -5.3A13.5 13.5 0 0 1 320 -32A17 17 0 1 1 354 -33.8A14.5 14.5 0 0 1 350 -5.3Z"/></svg><svg class="sp-w" height="30" width="145.8" viewBox="6.9 -74 364.1 74.9" role="img" aria-label="nembo"><path fill="currentColor" d="M37.6 -56.2Q47.5 -56.2 53.6 -50Q59.7 -43.7 59.7 -32.5L59.7 -32.5L59.7 0L45.7 0L45.7 -30.6Q45.7 -37.2 42.4 -40.8Q39.1 -44.3 33.4 -44.3L33.4 -44.3Q27.6 -44.3 24.3 -40.8Q20.9 -37.2 20.9 -30.6L20.9 -30.6L20.9 0L6.9 0L6.9 -55.4L20.9 -55.4L20.9 -48.5Q23.7 -52.1 28.1 -54.2Q32.4 -56.2 37.6 -56.2L37.6 -56.2M124.5 -28.9Q124.5 -25.9 124.1 -23.5L124.1 -23.5L83.6 -23.5Q84.1 -17.5 87.8 -14.1Q91.5 -10.7 96.9 -10.7L96.9 -10.7Q104.7 -10.7 108 -17.4L108 -17.4L123.1 -17.4Q120.7 -9.4 113.9 -4.3Q107.1 0.9 97.2 0.9L97.2 0.9Q89.2 0.9 82.9 -2.7Q76.5 -6.2 73 -12.7Q69.4 -19.2 69.4 -27.7L69.4 -27.7Q69.4 -36.3 72.9 -42.8Q76.4 -49.3 82.7 -52.8Q89 -56.3 97.2 -56.3L97.2 -56.3Q105.1 -56.3 111.4 -52.9Q117.6 -49.5 121.1 -43.3Q124.5 -37 124.5 -28.9L124.5 -28.9M83.7 -32.9L110 -32.9Q109.9 -38.3 106.1 -41.6Q102.3 -44.8 96.8 -44.8L96.8 -44.8Q91.6 -44.8 88.1 -41.7Q84.5 -38.5 83.7 -32.9L83.7 -32.9M203.5 -56.2Q213.7 -56.2 220 -50Q226.2 -43.7 226.2 -32.5L226.2 -32.5L226.2 0L212.2 0L212.2 -30.6Q212.2 -37.1 208.9 -40.6Q205.6 -44 199.9 -44L199.9 -44Q194.2 -44 190.9 -40.6Q187.5 -37.1 187.5 -30.6L187.5 -30.6L187.5 0L173.5 0L173.5 -30.6Q173.5 -37.1 170.2 -40.6Q166.9 -44 161.2 -44L161.2 -44Q155.4 -44 152.1 -40.6Q148.7 -37.1 148.7 -30.6L148.7 -30.6L148.7 0L134.7 0L134.7 -55.4L148.7 -55.4L148.7 -48.7Q151.4 -52.2 155.7 -54.2Q159.9 -56.2 165 -56.2L165 -56.2Q171.5 -56.2 176.6 -53.5Q181.7 -50.7 184.5 -45.6L184.5 -45.6Q187.2 -50.4 192.4 -53.3Q197.5 -56.2 203.5 -56.2L203.5 -56.2M253.5 -47.3Q256.2 -51.3 261 -53.8Q265.7 -56.3 271.8 -56.3L271.8 -56.3Q278.9 -56.3 284.7 -52.8Q290.4 -49.3 293.8 -42.9Q297.1 -36.4 297.1 -27.9L297.1 -27.9Q297.1 -19.4 293.8 -12.9Q290.4 -6.3 284.7 -2.7Q278.9 0.9 271.8 0.9L271.8 0.9Q265.6 0.9 261 -1.6Q256.3 -4 253.5 -7.9L253.5 -7.9L253.5 0L239.5 0L239.5 -74L253.5 -74L253.5 -47.3M282.8 -27.9Q282.8 -32.9 280.8 -36.6Q278.7 -40.2 275.4 -42.1Q272 -44 268.1 -44L268.1 -44Q264.3 -44 261 -42.1Q257.6 -40.1 255.6 -36.4Q253.5 -32.7 253.5 -27.7L253.5 -27.7Q253.5 -22.7 255.6 -19Q257.6 -15.3 261 -13.4Q264.3 -11.4 268.1 -11.4L268.1 -11.4Q272 -11.4 275.4 -13.4Q278.7 -15.4 280.8 -19.1Q282.8 -22.8 282.8 -27.9L282.8 -27.9"/><path fill="none" stroke="currentColor" stroke-width="12.5" stroke-linejoin="round" d="M323 -5.3A13.5 13.5 0 0 1 320 -32A17 17 0 1 1 354 -33.8A14.5 14.5 0 0 1 350 -5.3Z"/></svg><p class="sp-say">Che tempo fa, e che tempo ha fatto.</p></div><div class="sp-f"><span class="sp-go">Tocca per continuare</span><span class="sp-v">Versione <i id="sp-ver">1.2.1</i></span><span class="sp-by">by <b>nautargo</b></span></div></div>
 <div id="app"><header id="top"></header><main id="main"></main><nav id="nav" aria-label="Sezioni"></nav></div>
 <div id="sheet" hidden></div>
 <div id="tip" hidden></div>
@@ -584,7 +587,7 @@ tr.wet td:nth-child(4){color:var(--rain);font-weight:700}
 (function () {
 'use strict';
 /* ---------- utilità ---------- */
-var VERSION = '1.2.0';
+var VERSION = '1.2.1';
 var GIORNI = ['domenica', 'lunedì', 'martedì', 'mercoledì', 'giovedì', 'venerdì', 'sabato'];
 var GIORNI3 = ['dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab'];
 var MESI = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'];
@@ -1011,11 +1014,34 @@ function dpcFor(cache, zone, date) {
 var LIVELLI = ['', 'gialla', 'arancione', 'rossa'];
 function zoneNice(z) { return String(z || '').replace(/([a-zà-ù])\?([A-Za-zà-ù])/g, "$1'$2").replace(/,(\S)/g, ', $1'); }
 function zoneShort(z) { var s = zoneNice(z).split(/ - |, |: /)[0]; return s.length > 34 ? s.slice(0, 32) + '…' : s; }
-/* Siti regionali verificati; per le altre Regioni si rimanda all'elenco nazionale dei Centri Funzionali */
-var REGIONI = {
-  'Emilia-Romagna': ['Allerta meteo Emilia-Romagna', 'https://allertameteo.regione.emilia-romagna.it/'],
-  'Lazio': ['Protezione Civile Lazio', 'https://protezionecivile.regione.lazio.it/bollettini-allertamenti']
-};
+/* Siti delle allerte regionali (indirizzi ufficiali verificati a novembre 2026). Dove manca, si rimanda all'elenco nazionale dei Centri Funzionali.
+   La chiave è una parte del nome della Regione, senza accenti né simboli; per il Trentino-Alto Adige decide la zona di allerta. */
+var REGIONI = [
+  ['piemonte', 'Centro funzionale Piemonte (Arpa)', 'https://www.arpa.piemonte.it/'],
+  ['valledaosta', 'Centro funzionale Valle d\'Aosta', 'https://cf.regione.vda.it/'],
+  ['lombardia', 'Allertamento Regione Lombardia', 'https://www.regione.lombardia.it/sicurezza-e-protezione-civile/pianificazione-allertamento-e-gestione-emergenze/monitoraggio-e-allertamento/red-funzionamento-allertamento-protezione-civile-lombardia'],
+  ['bolzano', 'Protezione civile Alto Adige', 'https://provinz.bz.it/sicurezza-protezione-civile/protezione-civile/'],
+  ['veneto', 'Centro funzionale Veneto', 'https://www.regione.veneto.it/it_IT/web/protezione-civile/centro-funzionale-decentrato'],
+  ['friuli', 'Protezione civile FVG', 'https://www.protezionecivile.fvg.it/'],
+  ['liguria', 'Allerta Liguria', 'https://allertaliguria.regione.liguria.it/'],
+  ['emilia', 'Allerta meteo Emilia-Romagna', 'https://allertameteo.regione.emilia-romagna.it/'],
+  ['toscana', 'Centro funzionale Toscana', 'https://www.cfr.toscana.it/'],
+  ['umbria', 'Centro funzionale Umbria', 'https://cfumbria.regione.umbria.it/'],
+  ['marche', 'Allerta meteo Marche', 'https://allertameteo.regione.marche.it/'],
+  ['lazio', 'Protezione civile Lazio', 'https://protezionecivile.regione.lazio.it/bollettini-allertamenti'],
+  ['abruzzo', 'AllarMeteo Abruzzo', 'https://allarmeteo.regione.abruzzo.it/'],
+  ['campania', 'Centro funzionale Campania', 'https://centrofunzionale.regione.campania.it/'],
+  ['basilicata', 'Centro funzionale Basilicata', 'https://centrofunzionale.regione.basilicata.it/'],
+  ['calabria', 'Centro funzionale Calabria', 'https://www.cfd.calabria.it/'],
+  ['sicilia', 'Protezione civile Sicilia', 'https://www.protezionecivilesicilia.it/'],
+  ['sardegna', 'Protezione civile Sardegna', 'https://www.sardegnaprotezionecivile.it/']
+];
+function regionLink(p) {
+  var k = String(p.admin || '').toLowerCase().normalize('NFD').replace(/[^a-z]/g, '');
+  if (/trentino|altoadige|sudtirol/.test(k) || /provincia autonoma/i.test(p.zone || '')) k = /bolzano/i.test(p.zone || '') ? 'bolzano' : 'trento';
+  for (var i = 0; i < REGIONI.length; i++) if (k.indexOf(REGIONI[i][0]) >= 0) return REGIONI[i];
+  return null;
+}
 var LINK = {
   bollettino: 'https://mappe.protezionecivile.gov.it/it/mappe-rischi/bollettino-di-criticita',
   cosaFare: 'https://rischi.protezionecivile.gov.it/it/approfondimento/rischio-meteo-idro-lallertamento',
@@ -1304,9 +1330,10 @@ function cloudD(cx, by, k) {
   function R(r) { return +(r * k).toFixed(2); }
   return 'M' + X(7) + ' ' + Y(17.5) + 'H' + X(17) + 'A' + R(4) + ' ' + R(4) + ' 0 0 0 ' + X(17.4) + ' ' + Y(9.52) + 'A' + R(5.5) + ' ' + R(5.5) + ' 0 0 0 ' + X(6.6) + ' ' + Y(10.6) + 'A' + R(3.5) + ' ' + R(3.5) + ' 0 0 0 ' + X(7) + ' ' + Y(17.5) + 'Z';
 }
-function raysD(cx, cy, r1, r2) {
+/* Raggi del sole: angoli in gradi (0 = destra, 90 = giù), tutti alla stessa distanza dal disco e lunghi uguali */
+function raysD(cx, cy, r1, r2, angs) {
   var d = '';
-  for (var a = 0; a < 8; a++) { var t = a * Math.PI / 4, c = Math.cos(t), s = Math.sin(t); d += 'M' + (cx + c * r1).toFixed(2) + ' ' + (cy + s * r1).toFixed(2) + 'L' + (cx + c * r2).toFixed(2) + ' ' + (cy + s * r2).toFixed(2); }
+  (angs || [0, 45, 90, 135, 180, 225, 270, 315]).forEach(function (g) { var t = g * Math.PI / 180, c = Math.cos(t), s = Math.sin(t); d += 'M' + (cx + c * r1).toFixed(2) + ' ' + (cy + s * r1).toFixed(2) + 'L' + (cx + c * r2).toFixed(2) + ' ' + (cy + s * r2).toFixed(2); });
   return d;
 }
 function moonD(cx, cy, k) {
@@ -1318,21 +1345,23 @@ function flakeD(x, y, r) {
   for (var a = 0; a < 3; a++) { var t = a * Math.PI / 3 + Math.PI / 2, c = Math.cos(t) * r, s = Math.sin(t) * r; d += 'M' + (x - c).toFixed(2) + ' ' + (y - s).toFixed(2) + 'L' + (x + c).toFixed(2) + ' ' + (y + s).toFixed(2); }
   return d;
 }
-var CL_UP = cloudD(12, 15, 0.9), CL_MID = cloudD(13.2, 19.2, 0.8);
+/* Composizione: la nuvola piena copre il disco; i raggi stanno solo dove non toccano la nuvola */
+var CL_UP = cloudD(12, 14.8, 0.9), CL_MID = cloudD(13.8, 19.6, 0.78), SUN_SIDE = [135, 180, 225, 270, 315];
 function drops(list, cls) { return list.map(function (d, i) { return '<path class="' + (cls || 'i-rn') + ' d' + (i + 1) + '" d="' + d + '"/>'; }).join(''); }
+var RAIN3 = ['M8.9 17.4l-1.1 3.2', 'M12.9 17.4l-1.1 3.2', 'M16.9 17.4l-1.1 3.2'];
 var WXI = {
-  sole: '<circle class="i-sun i-disk" cx="12" cy="12" r="4.3"/><path class="i-sun i-rays" d="' + raysD(12, 12, 6.8, 9.2) + '"/>',
-  luna: '<path class="i-moon" d="' + moonD(12, 12, 1) + '"/>',
-  poco: '<circle class="i-sun i-disk" cx="8.6" cy="8.6" r="3.5"/><path class="i-sun i-rays" d="' + raysD(8.6, 8.6, 5.2, 6.9) + '"/><path class="i-cl" d="' + CL_MID + '"/>',
-  pocon: '<path class="i-moon" d="' + moonD(8.8, 8.6, 0.62) + '"/><path class="i-cl" d="' + CL_MID + '"/>',
-  nuvole: '<path class="i-cl bk" d="' + cloudD(15, 13.6, 0.6) + '"/><path class="i-cl" d="' + cloudD(11.2, 18.8, 0.88) + '"/>',
-  nebbia: '<path class="i-cl" d="' + cloudD(12, 13.6, 0.82) + '"/><path class="i-fog d1" d="M4 16.6h16"/><path class="i-fog d2" d="M6 19.2h12"/><path class="i-fog d3" d="M8.5 21.8h7"/>',
-  pioviggine: '<path class="i-cl" d="' + CL_UP + '"/>' + drops(['M8.4 17.6v1.2', 'M12.4 18.6v1.2', 'M16.4 17.6v1.2']),
-  pioggia: '<path class="i-cl" d="' + CL_UP + '"/>' + drops(['M8.8 17.2l-1.2 3.4', 'M12.8 17.2l-1.2 3.4', 'M16.8 17.2l-1.2 3.4']),
-  pioggiaforte: '<path class="i-cl dk" d="' + CL_UP + '"/>' + drops(['M7.6 17l-1.6 4.6', 'M10.9 17l-1.6 4.6', 'M14.2 17l-1.6 4.6', 'M17.5 17l-1.6 4.6']),
-  neve: '<path class="i-cl" d="' + CL_UP + '"/>' + drops([flakeD(8, 18.6, 1.5), flakeD(12.2, 20.4, 1.5), flakeD(16.4, 18.6, 1.5)], 'i-sn'),
-  nevischio: '<path class="i-cl" d="' + CL_UP + '"/>' + drops(['M8.8 17.2l-1.2 3.4', 'M16.8 17.2l-1.2 3.4']) + '<path class="i-sn d2" d="' + flakeD(12.2, 19.6, 1.5) + '"/>',
-  temporale: '<path class="i-cl dk" d="' + CL_UP + '"/><path class="i-bolt" d="M12.9 15.4l-3.1 4.1h2.6l-1.3 3.3 3.9-4.6h-2.7l1.4-2.8z"/>'
+  sole: '<circle class="i-sun i-disk" cx="12" cy="12" r="4"/><path class="i-sun i-rays" d="' + raysD(12, 12, 6.4, 8.6) + '"/>',
+  luna: '<path class="i-moon" d="' + moonD(12.2, 12, 0.95) + '"/>',
+  poco: '<path class="i-sun i-rays p" d="' + raysD(9, 9, 5.2, 7, SUN_SIDE) + '"/><circle class="i-sun i-disk" cx="9" cy="9" r="3.4"/><path class="i-cl" d="' + CL_MID + '"/>',
+  pocon: '<path class="i-moon" d="' + moonD(9.4, 9.2, 0.6) + '"/><path class="i-cl" d="' + CL_MID + '"/>',
+  nuvole: '<path class="i-cl bk" d="' + cloudD(15.2, 13.4, 0.58) + '"/><path class="i-cl" d="' + cloudD(11.4, 18.8, 0.88) + '"/>',
+  nebbia: '<path class="i-cl" d="' + cloudD(12, 13.2, 0.8) + '"/><path class="i-fog d1" d="M4.5 16.4h15"/><path class="i-fog d2" d="M6.5 19h11"/><path class="i-fog d3" d="M9 21.6h6"/>',
+  pioviggine: '<path class="i-cl" d="' + CL_UP + '"/>' + drops(['M8.4 17.6v1', 'M12.4 18.8v1', 'M16.4 17.6v1']),
+  pioggia: '<path class="i-cl" d="' + CL_UP + '"/>' + drops(RAIN3),
+  pioggiaforte: '<path class="i-cl dk" d="' + CL_UP + '"/>' + drops(['M7.9 17.2l-1.5 4.3', 'M11.1 17.2l-1.5 4.3', 'M14.3 17.2l-1.5 4.3', 'M17.5 17.2l-1.5 4.3']),
+  neve: '<path class="i-cl" d="' + CL_UP + '"/>' + drops([flakeD(8.2, 18.8, 1.4), flakeD(12.2, 20.6, 1.4), flakeD(16.2, 18.8, 1.4)], 'i-sn'),
+  nevischio: '<path class="i-cl" d="' + CL_UP + '"/>' + drops([RAIN3[0], RAIN3[2]]) + '<path class="i-sn d2" d="' + flakeD(12.3, 19.4, 1.4) + '"/>',
+  temporale: '<path class="i-cl dk" d="' + CL_UP + '"/><path class="i-bolt" d="M12.8 15.6l-2.9 3.9h2.5l-1.2 3 3.7-4.3h-2.6l1.3-2.6z"/>'
 };
 function wxIcon(name, size) {
   return '<svg class="wxi" width="' + (size || 24) + '" height="' + (size || 24) + '" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (WXI[name] || WXI.nuvole) + '</svg>';
@@ -1401,7 +1430,7 @@ function wordmark(h) {
 /* Ogni voce: t titolo, w cosa indica, c cosa comporta, r valori di riferimento, v(valore, contesto) lettura del valore mostrato */
 function band(v, cuts, txts) { for (var i = 0; i < cuts.length; i++) if (v < cuts[i]) return txts[i]; return txts[cuts.length]; }
 var INFO = {
-  allerta: { t: 'Allerta', w: 'L\'allerta ufficiale per rischio idraulico (piene dei fiumi maggiori), idrogeologico (frane, piene di torrenti) e temporali. La decidono le Regioni; nembo la legge dal bollettino di criticità nazionale del Dipartimento della Protezione Civile, per oggi e domani.', c: 'Gialla: fenomeni localizzati, possibili danni puntuali. Arancione: fenomeni diffusi, possibili danni a edifici e infrastrutture. Rossa: fenomeni estesi e intensi, pericolo per le persone. Segui sempre le indicazioni del tuo Comune.', r: 'Il bollettino nazionale esce di norma tra le 13:30 e le 15:45 e arriva in nembo 15-45 minuti dopo. Le Regioni possono pubblicare sui loro siti un po\' prima e aggiornare in serata.' },
+  allerta: { t: 'Allerta', w: 'L\'allerta ufficiale per rischio idraulico (piene dei fiumi maggiori), idrogeologico (frane, piene di torrenti) e temporali. La decidono le Regioni; nembo la legge dal bollettino di criticità nazionale del Dipartimento della Protezione Civile, per oggi e domani.', c: 'Gialla: fenomeni localizzati, possibili danni puntuali. Arancione: fenomeni diffusi, possibili danni a edifici e infrastrutture. Rossa: fenomeni estesi e intensi, pericolo per le persone. Segui sempre le indicazioni del tuo Comune.', r: 'Il bollettino nazionale esce di norma tra le 13:30 e le 15:45 e arriva in nembo 15-45 minuti dopo. Le Regioni possono pubblicare sui loro siti un po\' prima e aggiornare in serata: nel pannello dell\'allerta trovi il collegamento al sito della tua Regione.' },
   zona: { t: 'Zona di allerta', w: 'L\'Italia è divisa in zone con clima e bacini simili. L\'allerta vale per la zona intera, non per il singolo comune.', c: 'Un\'allerta nella tua zona non vuol dire che il fenomeno colpirà proprio il tuo comune, ma che lì è possibile.', r: 'nembo trova la zona dalle coordinate del luogo e la ricontrolla ogni 30 giorni.' },
   attenzione: { t: 'Attenzione', w: 'Un avviso calcolato da nembo sui modelli meteo, non un\'allerta ufficiale.', c: 'Segnala nelle prossime 48 ore raffiche da burrasca, rovesci intensi, pioggia abbondante, caldo intenso, gelo, neve o temporali. Non sostituisce le indicazioni delle autorità.', r: 'Soglie: raffiche da 62 km/h (forza 8) e da 89 km/h (forza 10); oltre 10 mm in un\'ora (30 per il nubifragio); oltre 50 mm in un giorno; massime da 35°; minime sotto zero (sotto -10° dove il gelo è normale); neve da 1 cm.' },
   media: { t: 'Media del periodo', w: 'La normale climatica: la temperatura massima tipica di questi giorni dell\'anno nel trentennio 1991-2020, il riferimento dell\'Organizzazione Meteorologica Mondiale. nembo la ricava dalla rianalisi Copernicus ERA5 per il punto scelto, come media dei 15 giorni attorno alla data.', c: 'Dice se la giornata è anomala per la stagione: uno scarto ampio e prolungato pesa su colture, consumi di energia e salute più del valore assoluto.', r: 'Fino a 1,5° di scarto: nella media. Da 2 a 4°: un po\' fuori media. Da 5° in su: anomalia marcata.', v: function (d) { var a = Math.abs(d); return a < 1.5 ? 'Nella media: nulla di insolito per la stagione.' : a < 5 ? (d > 0 ? 'Più caldo del solito, ma senza eccessi.' : 'Più fresco del solito, ma senza eccessi.') : (d > 0 ? 'Anomalia calda marcata per la stagione.' : 'Anomalia fredda marcata per la stagione.'); } },
@@ -1543,19 +1572,25 @@ function pillBtn(k, cls, icon, txt) {
   return `<button class="pb ${cls}" data-a="tog" data-k="${k}" aria-expanded="${open}">${ic(icon, 17)}<span>${txt}</span>${ic(open ? 'su' : 'giu', 14)}</button>`;
 }
 function panel(k, html) { return V.open[k] && html ? `<div class="pan${V.just === k ? ' reveal' : ''}">${html}</div>` : ''; }
+/* Collegamento al sito delle allerte della Regione del luogo: c'è in ogni pannello dell'allerta */
+function regAnchor(p) {
+  var reg = regionLink(p);
+  return reg ? `<a href="${reg[2]}" target="_blank" rel="noopener">${esc(reg[1])}</a>` : `<a href="${LINK.centri}" target="_blank" rel="noopener">Centri funzionali regionali</a>`;
+}
+function regLinks(p) { return `<div class="alert-a reg-a"><a href="${LINK.bollettino}" target="_blank" rel="noopener">Bollettino nazionale</a>${regAnchor(p)}</div>`; }
 function alertUI(p, today) {
   if (!isIt(p)) return null;
   var al = alertOf(p, today);
   if (!al) {
     if (p.zoneAt && !p.zone) return null;
-    return { pill: pillBtn('al', 'na', 'scudo', 'Allerte n.d.'), panel: `<a class="calm" href="${LINK.bollettino}" target="_blank" rel="noopener">${ic('scudo', 20)}<span>Allerte non disponibili in questo momento.<small>Apri il bollettino ufficiale</small></span>${ic('fuori', 18)}</a>` };
+    return { pill: pillBtn('al', 'na', 'scudo', 'Allerte n.d.'), panel: `<div class="calm">${ic('scudo', 20)}<span>Allerte non disponibili in questo momento.</span></div>${regLinks(p)}` };
   }
   var src = `${esc(zoneShort(p.zone))} - bollettino del ${fmtDay(M.dpc.date, 'mese')}, ore ${M.dpc.time}`;
-  var reg = REGIONI[p.admin], regA = reg ? `<a href="${reg[1]}" target="_blank" rel="noopener">${esc(reg[0])}</a>` : `<a href="${LINK.centri}" target="_blank" rel="noopener">Centro funzionale regionale</a>`;
+  var regA = regAnchor(p);
   if (!al.max) {
     var giorni = al.a && al.b ? 'oggi e domani' : al.a ? 'oggi' : 'domani';
     var attesa = al.a && !al.b ? ' Domani: bollettino atteso nel pomeriggio.' : '';
-    return { pill: pillBtn('al', 'ok', 'scudook', 'Nessuna allerta'), panel: `<div class="calm ok">${ic('scudook', 20)}<span>Nessuna allerta ${giorni}.<small>${src}.${attesa}</small></span>${ib('allerta')}</div>` };
+    return { pill: pillBtn('al', 'ok', 'scudook', 'Nessuna allerta'), panel: `<div class="calm ok">${ic('scudook', 20)}<span>Nessuna allerta ${giorni}.<small>${src}.${attesa}</small></span>${ib('allerta')}</div>${regLinks(p)}` };
   }
   function riga(nome, l) {
     if (!l) return `<p><i class="dot lev0"></i><span><b>${nome}</b> Bollettino non ancora uscito.</span></p>`;
