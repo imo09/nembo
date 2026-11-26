@@ -1,4 +1,4 @@
-# nembo 1.1.0
+# nembo 1.2.0
 
 Web app meteo di **nautargo**: previsioni, tempo passato dal 1940, pagella delle previsioni, registro con esportazione Excel e PDF, allerte della Protezione Civile.
 
@@ -15,10 +15,26 @@ Non servono chiavi, account o server: l'app chiama direttamente i servizi aperti
 ## Fonti dei dati
 
 - Open-Meteo.com (CC BY 4.0): previsioni, giorni passati, previsioni archiviate, ricerca dei luoghi
+- Modello d'insieme ECMWF (51 scenari) tramite Open-Meteo: attendibilità della previsione
 - Copernicus ERA5 tramite Open-Meteo: tempo passato dal 1940, media climatica 1991-2020
 - Copernicus CAMS tramite Open-Meteo: qualità dell'aria
 - Dipartimento della Protezione Civile (CC BY 4.0): bollettino di criticità nazionale, da GitHub `pcm-dpc`
 - GeoNames (CC BY 4.0) per la ricerca, OpenStreetMap per il nome della posizione
+
+## Novità della 1.2.0
+
+- Previsione a 14 giorni, con attendibilità in percentuale per ogni ora e ogni giorno (51 scenari ECMWF)
+- Prossimi giorni: temperature come due linee (massime e minime), righe sottili ogni 5 gradi in tutti i grafici
+- Grafico del giorno: orari più fitti secondo la larghezza dello schermo, con l'icona del cielo sopra ogni orario
+- Umidità nelle strisce delle ore e dei giorni e nel giorno ora per ora; tolti i doppioni dal dettaglio; punto di rugiada solo in "Più dati"
+- Icone "i" al posto di note e didascalie: cosa indica il dato, cosa comporta, lettura del valore mostrato, e rimando alla guida (riscritta con le stesse voci)
+- Icone meteo ridisegnate (bicolori, centrate) e animazioni rifatte; l'icona di Oggi nella barra è il tempo di adesso
+- Splash con la "o" di nembo animata, "Tocca per continuare", versione e "by nautargo"; si può disattivare dalle Impostazioni
+- Allerta, attenzione e media del periodo chiusi su una sola riga
+- Luoghi affiancati: nomi fissi in alto con temperatura, massima e minima; avvertenze e fonti una sola volta
+- Passato: layout uniforme, soglia dei giorni di pioggia dentro il riquadro "Giorni di pioggia"
+- Protezione Civile: controllo più frequente tra le 13 e le 18 e ricerca dell'ultimo bollettino più robusta
+- Tolta la mail di supporto dalle Impostazioni
 
 ## Novità della 1.1.0
 
